@@ -57,13 +57,13 @@ volumes:
   db_maria:
     driver: local
     driver_opts:
-      device: /Users/sbzizal/Desktop/inception/srcs/requirements/db_maria
+      device: /Users/sbzizal/Desktop/db_maria
       type: none
       o: bind
 
   db_wordpress:
     driver: local
     driver_opts:
-      device: /Users/sbzizal/Desktop/inception/srcs/requirements/db_wordpress
+      device: /Users/sbzizal/Desktop/db_wordpress
       type: none
       o: bind
