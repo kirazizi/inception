@@ -10,7 +10,7 @@ if [ ! -f wp-config.php ]; then
 wp core download --allow-root --path=/var/www/html/wordpress
 
 wp config create --dbname=wordpress --dbuser=admin --dbpass=admin --dbhost=mariadb --allow-root --path=/var/www/html/wordpress
-wp core install --url=localhost --title=wordpress --admin_user=admin --admin_password=admin --admin_email=admin@mail.com --skip-email --allow-root --path=/var/www/html/wordpress
+wp core install --url=https://sbzizal.42.fr --title=wordpress --admin_user=admin --admin_password=admin --admin_email=admin@mail.com --skip-email --allow-root --path=/var/www/html/wordpress
 wp user create user user@mail.com --role=author --user_pass=user --allow-root
 
 fi

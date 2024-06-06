@@ -1,4 +1,4 @@
-[mysqld]
+[mysqld_safe]
 
 user = mysql
 
@@ -10,4 +10,4 @@ datadir = /var/lib/mysql
 
 socket = /run/mysqld/mysqld.sock
 
-[mysqld]
+[mysqld_safe]

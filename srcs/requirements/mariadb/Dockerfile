@@ -10,6 +10,6 @@ RUN chown -R mysql:mysql /var/run/mysqld
 
 COPY ./tools/script.sh /
 
-RUN chmod +x /script.sh
+RUN bash /script.sh
 
-CMD ["bash", "/script.sh"]
+CMD ["mysqld_safe"]
