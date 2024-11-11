@@ -29,6 +29,8 @@ services:
     restart: on-failure
     env_file:
       - .env
+    depends_on:
+      - mariadb
     
   #nginx layer >> nginx
   nginx:
@@ -47,6 +49,8 @@ services:
       - "443:443"
     env_file:
       - .env
+    depends_on:
+      - wordpress
 
 # source layer >> network and volumes
 networks:
@@ -55,6 +59,7 @@ networks:
 
 volumes:
   db_maria:
+    name: db_maria
     driver: local
     driver_opts:
       device: /Users/sbzizal/Desktop/db_maria
@@ -62,6 +67,7 @@ volumes:
       o: bind
 
   db_wordpress:
+    name: db_wordpress
     driver: local
     driver_opts:
       device: /Users/sbzizal/Desktop/db_wordpress
