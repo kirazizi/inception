@@ -10,6 +10,12 @@ services:
     image: mariadb:my_mariadb
     build:
       context: requirements/mariadb
+      args:
+        DB_NAME: $DB_NAME
+        DB_USER: $DB_USER
+        DB_PSSWRD: $DB_PSSWRD
+        RT_USER: $RT_USER
+        RT_PASSWRD: $RT_PASSWRD
     restart: on-failure
     env_file:
       - .env
@@ -62,7 +68,7 @@ volumes:
     name: db_maria
     driver: local
     driver_opts:
-      device: /Users/sbzizal/Desktop/db_maria
+      device: /home/sbzizal/data/db_maria
       type: none
       o: bind
 
@@ -70,6 +76,6 @@ volumes:
     name: db_wordpress
     driver: local
     driver_opts:
-      device: /Users/sbzizal/Desktop/db_wordpress
+      device: /home/sbzizal/data/db_wordpress
       type: none
       o: bind
