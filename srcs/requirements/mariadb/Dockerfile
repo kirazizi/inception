@@ -1,6 +1,6 @@
 FROM debian:bullseye
 
-RUN apt update -y && apt upgrade -y && apt install -y mariadb-server curl
+RUN apt update -y && apt upgrade -y && apt install mariadb-server -y
 
 ARG DB_NAME
 ARG DB_USER
